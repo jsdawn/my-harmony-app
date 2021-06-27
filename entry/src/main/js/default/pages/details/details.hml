@@ -1,0 +1,7 @@
+<div class="container">
+    <text class="title">
+        Hello111 {{ title }}
+    </text>
+    <text>{{ responseData }}</text>
+    <button onclick="fetchDemo">请求demoApi</button>
+</div>

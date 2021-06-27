@@ -1,0 +1,76 @@
+{
+  "app": {
+    "bundleName": "com.example.myharmonyapp",
+    "vendor": "example",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {
+    "default": {
+      "network": {
+        "cleartextTraffic": true
+      }
+    }
+  },
+  "module": {
+    "package": "com.example.myharmonyapp",
+    "name": ".MyApplication",
+    "mainAbility": "com.example.myharmonyapp.MainAbility",
+    "deviceType": [
+      "phone",
+      "tv"
+    ],
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.INTERNET"
+      },
+      {
+        "name": "ohos.permission.GET_NETWORK_INFO"
+      },
+      {
+        "name": "ohos.permission.SET_NETWORK_INFO"
+      }
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": true
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "name": "com.example.myharmonyapp.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:entry_MainAbility",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ],
+    "js": [
+      {
+        "pages": [
+          "pages/index/index",
+          "pages/details/details"
+        ],
+        "name": "default",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": true
+        }
+      }
+    ]
+  }
+}
